@@ -1,10 +1,10 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+import CounterPage from './pages/CounterPage';
 
 const App = () => {
     return (
         <div>
-            <Counter />
+            <CounterPage />
         </div>
     );
 };
