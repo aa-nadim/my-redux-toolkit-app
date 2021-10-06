@@ -1,10 +1,18 @@
-import React from 'react';
-import CounterPage from './pages/CounterPage';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
+
+import Login from './components/Login';
+import Logout from './components/Logout';
+
 
 const App = () => {
+    const user = useSelector(selectUser);
+
     return (
         <div>
-            <CounterPage />
+            {
+                user ? <Logout /> : <Login />
+            }
         </div>
     );
 };
